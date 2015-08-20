@@ -11,4 +11,4 @@ RUN ln -s /usr/share/tomcat8/apache-tomcat-8.0.24 /usr/share/tomcat
 RUN chown -R tomcat:tomcat /usr/share/tomcat8
 
 #EXPOSE 8080
-CMD /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh && tail -f /usr/share/tomcat/logs/catalina.out
+CMD /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh && tail -F /usr/share/tomcat/logs/catalina.out
