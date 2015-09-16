@@ -5,7 +5,7 @@ ENV TOMCAT_VERSION=8.0.26
 
 RUN adduser --system --shell /bin/bash --gecos 'Tomcat user' --group --disabled-password --home /home/tomcat tomcat
 
-RUN wget http://www.us.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -O /tmp/tomcat.tar.gz
+RUN wget http://archive.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -O /tmp/tomcat.tar.gz
 RUN mkdir -p /usr/share/tomcat8
 RUN tar xzvf /tmp/tomcat.tar.gz -C /usr/share/tomcat8
 RUN rm /tmp/tomcat.tar.gz
