@@ -1,7 +1,7 @@
 nginx:
-    build: .
+    image: mclose/nginx
     ports:
-        - "443:443"
+        - "443"
     volumes:
         - ./nginx.key:/etc/nginx/ssl/nginx.key
         - ./nginx.crt:/etc/nginx/ssl/nginx.crt
